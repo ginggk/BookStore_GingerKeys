@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block main %}
-<div class="container mt-4">
+<div class="container mt-4 text_container">
     <ul>
         <li>
             <div class="d-flex justify-content-between">
@@ -13,8 +13,8 @@
                 <h3>by {{ author.name }}</h3>
                 {%endfor%}
             </div>
-            <div>
-                <a href="book-list"><img class="p-3" src="{{ book.cover_image.url }} " width="265"></a>
+            <div class="pb-5">
+                <a href="book-list"><img class="p-3 shadow" src="{{ book.cover_image.url }} " width="265"></a>
             </div>
             <div>
                 <h4>Price: ${{ book.price }}</h4>

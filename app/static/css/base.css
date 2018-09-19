@@ -1,0 +1,26 @@
+body {
+    background-image: url("https://wallpaper-gallery.net/images/background-wallpaper-tumblr/background-wallpaper-tumblr-5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.text_container {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.home_container {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-color,
+a.navbar-color {
+    background-color: rgb(254, 186, 172);
+    color: white;
+}
