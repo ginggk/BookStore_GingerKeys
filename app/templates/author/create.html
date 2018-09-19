@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
 {% block main %}
-<form method="post">
-    {% csrf_token %}
-</form>
+<div class="container mt-3">
+    <form method="post">
+        <div class="container mt-3">
+            <div class="d-flex">
+                <label class="mr-2" for="inputAuthor"> Name: </label>
+                <input type="text" name="name" class="form-control col-3 form-inline">
+            </div>
+            <p class="text-muted font-italic">*By clicking submit, you will be adding an author to our library!
+                Thanks
+                so much!</p>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-danger">Submit</button>
+        </div>
+        {% csrf_token %}
+    </form>
+</div>
 {% endblock main %}

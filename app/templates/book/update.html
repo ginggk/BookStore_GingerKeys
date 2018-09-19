@@ -1,6 +1,38 @@
 {% extends 'base.html' %}
 {% block main %}
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-</form>
+<div class="container">
+    <form method="post">
+        <div class="container mt-4">
+            <div class="form-group">
+                <label class="mr-2" for="inputTitle"> Title: </label>
+                <input type="text" name="name" class="form-control col-3 form-inline" value="{{ book.title }}">
+            </div>
+            <div class="form-group">
+                <label class="mr-2" for="inputPrice"> Price: </label>
+                <input type="text" name="name" class="form-control col-3 form-inline" value="{{ book.price }}">
+            </div>
+            <div class="form-group">
+                <label for="inputAuthor">Author(s): </label>
+                {% include 'book/components/authors-selector.html' %}
+            </div>
+            <hr />
+            <div class="form-group">
+                <label for="inputDescription"> Description: </label>
+                <input type="text" name="name" class="form-control col-12 form-inline" value="{{ book.description }}">
+                <p class="pt-2">Cover Image: </p><img src="{{ book.cover_image.url }}" width=130>
+            </div>
+            <hr />
+            <div class="custom-file">
+                <input type="file" class="custom-file-input form-control form-inline" value="{{ book.cover_image.url }}">
+                <!-- <img src="{{ book.cover_image.url }}" width=130> -->
+                <label class="custom-file-label" for="customFile">Update Cover Image.. </label>
+            </div>
+            <hr />
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+            </div>
+        </div>
+        {% csrf_token %}
+    </form>
+</div>
 {% endblock main %}

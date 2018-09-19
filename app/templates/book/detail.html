@@ -1,4 +1,31 @@
 {% extends 'base.html' %}
 {% block main %}
-{{ book }}
+<div class="container mt-4">
+    <ul>
+        <li>
+            <div class="d-flex justify-content-between">
+                <h1>{{ book.title }}</h1>
+                <a href="{% url 'book-update' book.id %}"><button type="submit" class="btn btn-outline-primary">Update</button></a>
+            </div>
+            <hr />
+            <div>
+                {% for author in book.authors.all %}
+                <h3>by {{ author.name }}</h3>
+                {%endfor%}
+            </div>
+            <div>
+                <a href="book-list"><img class="p-3" src="{{ book.cover_image.url }} " width="265"></a>
+            </div>
+            <div>
+                <h4>Price: ${{ book.price }}</h4>
+                <div class="pt-2">
+                    <h4>Description:
+                        <hr />
+                        {{ book.description}}</h4>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
 {% endblock main %}

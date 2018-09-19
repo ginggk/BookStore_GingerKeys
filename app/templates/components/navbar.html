@@ -1,3 +1,18 @@
 <nav class="navbar navbar-expand navbar-dark bg-primary">
-    <a href="{% url 'home' %}" class="navbar-brand">Book Store</a>
+    <a href="{% url 'home' %}" class="navbar-brand">The Base Camp Bookstore!</a>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active text-white" href="{% url 'book-list' %}">Books</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'author-list' %}">Authors</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'author-create' %}">Add an Author</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'book-create' %}">Add a Book</a>
+
+        </li>
+    </ul>
 </nav>
