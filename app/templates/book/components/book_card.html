@@ -3,7 +3,7 @@
     </a>
     <div class="d-flex justify-content-between w-100 p-3">
         <div>
-            <h5><a class="text-body" href="{% url 'book-detail' book.id %}">{{ book.title }}</a></h5>
+            <h5><a class="text-body text-font" href="{% url 'book-detail' book.id %}">{{ book.title }}</a></h5>
             <ul>
                 {% for author in book.authors.all %}
                 <li>{{ author.name }}</li>

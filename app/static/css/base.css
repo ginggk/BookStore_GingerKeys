@@ -1,18 +1,19 @@
 body {
-    background-image: url("https://wallpaper-gallery.net/images/background-wallpaper-tumblr/background-wallpaper-tumblr-5.jpg");
+    /* background-image: url("https://wallpaper-gallery.net/images/background-wallpaper-tumblr/background-wallpaper-tumblr-5.jpg"); */
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 .header {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .text_container {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .home_container {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -23,4 +24,11 @@ body {
 a.navbar-color {
     background-color: rgb(254, 186, 172);
     color: white;
+}
+/* html {
+    font-family: "Slabo 27px", serif;
+} */
+
+.text-font {
+    font-family: "Poppins", sans-serif;
 }

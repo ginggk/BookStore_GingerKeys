@@ -3,7 +3,7 @@
 <div class="container mt-4">
     <div class="d-flex justify-content-between">
         <h1>{{ author.name }}</h1>
-        <a href="{% url 'author-update' author.id %}"><button type="submit" class="btn btn-outline-primary">Update</button></a>
+        <a href="{% url 'author-update' author.id %}"><button type="submit" class="btn btn-outline-primary text-font">Update</button></a>
     </div>
     <br />
     {% for book in author.books.all %}

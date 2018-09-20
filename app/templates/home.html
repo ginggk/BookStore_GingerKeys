@@ -1,43 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block main %}
 
-<body>
-    <div class="overall-container">
-        <div class="container mt-5 home_container">
-            <div class="card border-secondary mb-3">
-                <div class=" card-body text-dark text-center shadow-lg">
-                    <blockquote class="blockquote">
-                        <h1 class="header">Welcome to the Base Camp Bookstore!</h1>
-                    </blockquote>
-                </div>
+
+<div class="overall-container">
+    <div class="container mt-5 home_container">
+        <div class="card border-secondary mb-3">
+            <div class=" card-body text-dark text-center shadow-lg">
+                <blockquote class="blockquote">
+                    <h1 class="header">Welcome to the Base Camp Bookstore!</h1>
+                </blockquote>
             </div>
-            <div class="container mt-5">
-                <div>
-                    <h1 class="text-center text-dark">Book of the Day!!</h1>
+        </div>
+        <div class="container mt-5">
+            <div>
+                <h1 class="text-center text-dark">Book of the Day!!</h1>
+            </div>
+            <hr />
+            <div class="d-flex">
+                <div class="d-flex mr-2 shadow-lg">
+                    <a href="{% url 'book-detail' book.id %}"><img src="{{ book.cover_image.url }}" width=230></a>
                 </div>
-                <hr />
-                <div class="d-flex">
-                    <div class="d-flex mr-2 shadow-lg">
-                        <a href="{% url 'book-detail' book.id %}"><img src="{{ book.cover_image.url }}" width=230></a>
-                    </div>
-                    <div class="ml-2">
-                        <a href="{% url 'book-detail' book.id %}">
-                            <h1 class="text-primary">{{ book.title }}</h1>
-                        </a>
-                        <hr />
-                        {% for author in book.authors.all %}
-                        <p class="text-dark"> by {{ author.name }}</p>
-                        {%endfor%}
-                        <p class="font-weight-bold text-muted">Price: ${{ book.price }}</p>
-                        <p class="font-italic text-muted">Description: {{ book.description }}</p>
-                    </div>
+                <div class="ml-2">
+                    <a href="{% url 'book-detail' book.id %}">
+                        <h1 class="text-dark">{{ book.title }}</h1>
+                    </a>
+                    <hr />
+                    {% for author in book.authors.all %}
+                    <p class="text-dark"> by {{ author.name }}</p>
+                    {%endfor%}
+                    <p class="font-weight-bold text-muted">Price: ${{ book.price }}</p>
+                    <p class="font-italic text-muted">Description: {{ book.description }}</p>
                 </div>
             </div>
         </div>
-</body>
+    </div>
 
 
 
 
 
-{% endblock main %}
+    {% endblock main %}
