@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'select2/css/select2.min.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Poppins|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 </head>
 
 <body style="background-image:url({% static '/img/background.jpg' %});">
@@ -22,6 +23,12 @@
     <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
     <script src="{% static 'select2/js/select2.full.min.js' %}"></script>
     <script src="{% static 'js/auto-select2.js' %}"></script>
+    <script>
+        // sean wrote this
+        $("p.text-truncate").on('click', function () {
+            $(this).removeClass('text-truncate')
+        })
+    </script>
 </body>
 
 </html>

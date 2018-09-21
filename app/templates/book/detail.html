@@ -1,31 +1,35 @@
 {% extends 'base.html' %}
 {% block main %}
-<div class="container mt-4 text_container pb-4">
-    <ul>
-        <li>
-            <div class="d-flex justify-content-between">
-                <h1>{{ book.title }}</h1>
-                <a href="{% url 'book-update' book.id %}"><button type="submit" class="btn btn-outline-primary text-font">Update</button></a>
-            </div>
-            <hr />
-            <div>
+<div class="container mt-4 text_container p-4">
+    <div class="d-flex justify-content-between">
+        <div></div>
+        <h1 class="fancy-text">{{ book.title }}</h1>
+        <a href="{% url 'book-update' book.id %}"><button type="submit" class="btn btn-light border text-font">Update</button></a>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-5">
+            <h3 class="hover-hover-text p-1">by
                 {% for author in book.authors.all %}
-                <h3><a class="text-dark" href="{% url 'author-detail' author.id %}">by {{ author.name }}</a></h3>
-                {%endfor%}
+                <a class="text-dark" href="{% url 'author-detail' author.id %}">
+                    {{ author.name }}{% if not forloop.last %},{% endif %}</a>
+                {% endfor %}
+            </h3>
+            <div class="d-flex justify-content-center">
+                <a href="book-list"><img class="p-3 shadow bg-white" src="{{ book.cover_image.url }} " width="265"></a>
             </div>
-            <div class="pb-5">
-                <a href="book-list"><img class="p-3 shadow" src="{{ book.cover_image.url }} " width="265"></a>
+        </div>
+        <div class="col-lg-6 bg-white p-3 rounded border border-muted">
+            <h4>Price: ${{ book.price }}</h4>
+            <hr />
+            <div class="pt-2">
+                <h4>Description:</h4>
+                <p class="text-truncate">
+                    {{ book.description}}
+                </p>
             </div>
-            <div>
-                <h4>Price: ${{ book.price }}</h4>
-                <div class="pt-2">
-                    <h4>Description:
-                        <hr />
-                        {{ book.description}}</h4>
-                </div>
-            </div>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>
 
 {% endblock main %}

@@ -43,3 +43,17 @@ a.navbar-color {
 
 /* rgb(254, 186, 172) 
 rgb(239, 125, 175)*/
+
+p.text-truncate:hover {
+    /* sean wrote this */
+    cursor: pointer;
+}
+
+.hover-hover-text:hover {
+    background-color: white;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+.fancy-text {
+    font-family: "Kaushan Script", cursive;
+}
