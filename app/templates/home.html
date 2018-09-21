@@ -5,7 +5,7 @@
 
 <div class="overall-container">
     <div class="container mt-5 home_container">
-        <div class="card border-secondary mb-3">
+        <div class="card border-secondary mb-3 card_color">
             <div class=" card-body text-dark text-center shadow-lg">
                 <blockquote class="blockquote">
                     <h1 class="header">Welcome to the Base Camp Bookstore!</h1>
@@ -27,7 +27,9 @@
                     </a>
                     <hr />
                     {% for author in book.authors.all %}
-                    <p class="text-dark"> by {{ author.name }}</p>
+                    <a href="{% url 'author-detail' author.id %}">
+                        <p class="text-dark"> by {{ author.name }}</p>
+                    </a>
                     {%endfor%}
                     <p class="font-weight-bold text-muted">Price: ${{ book.price }}</p>
                     <p class="font-italic text-muted">Description: {{ book.description }}</p>

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block main %}
-<div class="container mt-4 text_container">
+<div class="container mt-4 text_container pb-4">
     <ul>
         <li>
             <div class="d-flex justify-content-between">
@@ -10,7 +10,7 @@
             <hr />
             <div>
                 {% for author in book.authors.all %}
-                <h3>by {{ author.name }}</h3>
+                <h3><a class="text-dark" href="{% url 'author-detail' author.id %}">by {{ author.name }}</a></h3>
                 {%endfor%}
             </div>
             <div class="pb-5">

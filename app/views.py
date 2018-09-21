@@ -70,3 +70,7 @@ class AuthorUpdate(views.generic.UpdateView):
     model = models.Author
     template_name = 'author/update.html'
     fields = ['name']
+
+
+class Contact(views.generic.TemplateView):
+    template_name = 'contact.html'

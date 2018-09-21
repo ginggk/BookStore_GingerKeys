@@ -22,7 +22,7 @@ body {
 
 .navbar-color,
 a.navbar-color {
-    background-color: rgb(254, 186, 172);
+    background-color: rgb(226, 148, 133);
     color: white;
 }
 /* html {
@@ -32,3 +32,14 @@ a.navbar-color {
 .text-font {
     font-family: "Poppins", sans-serif;
 }
+
+.card_color {
+    background-color: rgba(255, 255, 255, 0.24);
+}
+
+/* .author_color {
+    background-color: rgba(255, 255, 255, 0.931);
+} */
+
+/* rgb(254, 186, 172) 
+rgb(239, 125, 175)*/

@@ -17,4 +17,5 @@ urlpatterns = [
         'author/<pk>/update/',
         views.AuthorUpdate.as_view(),
         name='author-update'),
+    path('contact', views.Contact.as_view(), name='contact'),
 ]
